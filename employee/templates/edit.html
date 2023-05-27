@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Editar</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+
+
+</head>
+<body class="edit">
+    
+    <form method="POST" action="/update/{{employee.id}}"> 
+
+        {% csrf_token %}
+
+        <div class="num">
+
+            <div class="in2">
+                <br>
+
+                <p> 
+                    <h3><font color="white">Update details </font> </h3>
+                </p>
+
+            </div>
+
+            <div>
+                <p><font color="white">Employee ID: </font></p>
+                <div>
+
+                    <input type="text" size="40" name="id" value="{{employee.id}}">
+
+                </div>
+
+            </div>
+
+            <div>
+                <p><font color="white">Employee Name: </font></p>
+                <div>
+
+                    <input type="text" size="40" name="name" value="{{employee.name}}">
+
+                </div>
+
+            </div>
+
+
+            <div>
+                <p><font color="white">Employee Email: </font></p>
+                <div>
+
+                    <input type="text" size="40" name="email" value="{{employee.email}}">
+
+                </div>
+
+            </div>
+
+
+            <div>
+                <p><font color="white">Employee Contacto: </font></p>
+                <div>
+
+                    <input type="text" size="40" name="contacto" value="{{employee.contacto}}">
+
+                </div>
+
+            </div>
+
+
+            <div>
+                <br>
+
+                <button type="submit" class="btn btn-success">Update</button>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </form>
+
+</body>
+</html>

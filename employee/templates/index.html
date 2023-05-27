@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Documento</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+</head>
+<body class="ind">
+
+
+    <form method = "POST" action = "/emp">
+        {% csrf_token %}
+
+        <div class="test">
+
+            <div class="in">
+                <br>
+                <p> 
+                    <h3><font color="white"> Enter details </font></h3>
+                </p>
+                <div>
+                    <p><font color="white"> Employee ID: </font></p>{{form.id}}
+
+                </div>
+                <div>
+                    <p><font color="white"> Employee Name: </font></p>{{form.name}}
+
+                </div>
+
+                <div>
+                    <p><font color="white"> Employee Email: </font></p>{{form.email}}
+
+                </div>
+                <div>
+                    <p><font color="white"> Employee Contacto: </font></p>{{form.contacto}}
+
+                </div>
+
+
+                <div>
+                    <br>
+                    <button type="submit" class="btn btn-success">Submit</button>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        
+    
+    
+    </form>
+
+</body>
+</html>
